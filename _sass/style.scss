@@ -20,11 +20,11 @@ body {
     }
 
     h1,h2,h3,h4,h5,h6 {
-         font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+         font-family: "Overpass", "Overpass", sans-serif, sans-serif;
          font-weight: bold;
-         line-height: 1.8;
+         line-height: 1.2;
          margin: 0;
-         text-transform: capitalize;
+         // text-transform: capitalize;
     }
 
 
@@ -36,7 +36,10 @@ a {
     }
 }
 
-
+hr {
+  border: 5px solid;
+  border-color: $brand-color;
+}
 
 p a {
     color: $text-color;
@@ -96,8 +99,9 @@ blockquote {
 
 
 .headline, .post-headline {
-    font-size: 4em;
-    margin-bottom: 0.5em;
+    font-size: 3.5em;
+    margin-bottom: 0em;
+    font-family: 'Overpass', sans-serif;
 
         @include media-query($on-palm) {
             font-size: 2em;
@@ -109,20 +113,20 @@ blockquote {
 .home {
     background-image: url(../images/left-arrow.svg);
     background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    opacity: 0.9;
+    height: 80px;
+    width: 80px;
+    opacity: 0.6;
     position: fixed;
-    top: 50px;
-    left: 50px;
+    top: 80px;
+    left: 90px;
     &:hover{
     opacity: 1;
     }
     @include media-query($on-laptop) {
         top: 90%;
-        left: 90%;
-        height: 30px;
-        width: 30px;
+        left: 85%;
+        height: 40px;
+        width: 40px;
         opacity: 0.6;
     }
 }
@@ -144,17 +148,17 @@ blockquote {
 
     a {
       &:hover {
-        background-color: #f1f1f1;
+        background-color: transparent;
         color: #333;
       }
     }
 
     a, span {
       padding: 7px 18px;
-      border: 1px solid #eee;
-      margin-left: -4px;
-      margin-right: -4px;
-      background-color: #ffffff;
+      border: 2px solid #eee;
+      margin-left: 0;
+      margin-right: 0;
+      background-color: transparent;
       display: inline-block;
     }
 }
@@ -217,4 +221,75 @@ footer {
 /* Horizontal Divider */
 .divider {
     margin: 1em 0;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.verticalStrip {
+  position: fixed;
+  top: 0;
+  left: 270px;
+  width: 10px;
+  background-color: $brand-color;
+  height:100%;
+  @include media-query($on-laptop) {
+      width: 0px;
+      opacity: 0;
+  }
+}
+
+.horizontalStrip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $brand-color;
+  height: 5px;
+  @include media-query($on-laptop) {
+    height: 3px;
+  }
+}
+
+.progress-bar {
+  height: 5px;
+  background: #025FFF;
+  width: 0%;
+}
+
+.progress-container {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background-color: $brand-color;
+  position: fixed;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #F09835;
+  // box-shadow: inset 0 0 5px grey;
+  // border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #025FFF;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
 }

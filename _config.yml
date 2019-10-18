@@ -1,8 +1,8 @@
 ### your site title here
 
-title: Hagura - Light!
-baseurl: /hagura # name of the repository
-email: your@email.com
+title: Sangwook Cheon
+baseurl: /sangwookcheon # name of the repository
+email: sangwookchn@gmail.com
 
 
 
@@ -10,7 +10,7 @@ highlighter: rouge
 markdown: kramdown
 
 
-paginate: 4
+paginate: 5
 
 
 # Tracker

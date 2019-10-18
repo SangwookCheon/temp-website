@@ -1,11 +1,20 @@
 ---
 layout: default
 ---
-<h1 class="headline">{{site.title}}</h1>
+
+<!-- IDEA: Create a Pong game using the scroll bar. Just a little fun game. Put a button where the user can play it. -->
+
+<div class="horizontalStrip"></div>
+
+<!-- <img src="images/sangwook-mit.PNG" alt=""> -->
+<br>
+<h1 class="headline unselectable">A quirky little blog made</h1><h1 class="headline unselectable" style="color: #F09835">by Sangwook</h1>
 <div class="article-list">
   {% for post in paginator.posts %}
     <h2><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+    <!-- <p class="meta"><small>{{post.date | date: '%B %d, %Y'}}</small></p> -->
     <p>{{post.excerpt | strip_html}}</p>
+    <br>
   {% endfor %}
 </div>
 

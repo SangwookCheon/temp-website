@@ -2,9 +2,15 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat|Overpass|Press+Start+2P&display=swap');
+
 @charset "utf-8";
 
-$base-font-family: 'Work Sans', sans-serif;
+$base-font-family: 'Poppins', sans-serif;
+$head-font-family: 'Work Sans', sans-serif;
 $base-font-size:   20px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -14,7 +20,8 @@ $spacing-unit:     30px;
 
 $text-color:       #333;
 $background-color: #fdfdfd;
-$brand-color:      #60c17d;
+$brand-color:      #F09835;
+$green-color:      #16c164;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -24,6 +31,12 @@ $grey-color-dark:  darken($grey-color, 25%);
 $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        1000px;
+
+#colorstrip{
+    width: 100%; height: 2px;
+    border-style: solid;
+    border-color: white;
+}
 
 
 
@@ -49,4 +62,9 @@ $on-laptop:        1000px;
         "google-fonts"
 ;
 
-
+$color-yellow: #FFBB00;
+$color-green: #16c164;
+$color-blue: #025FFF;
+$color-purple: #9650A9;
+$color-red: #E9373F;
+$color-orange: #F09835;
